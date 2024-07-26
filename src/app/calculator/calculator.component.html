@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>String Calculator</h1>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="numbers">Enter numbers</label>
+      <textarea id="numbers" [(ngModel)]="numbers" name="numbers" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Calculate</button>
+  </form>
+  <div *ngIf="result !== null">
+    <h2>Result: {{ result }}</h2>
+  </div>
+  <div *ngIf="errorMessage">
+    <h2 class="text-danger">{{ errorMessage }}</h2>
+  </div>
+</div>
